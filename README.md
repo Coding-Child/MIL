@@ -9,7 +9,6 @@ Multiple Instance Learning을 위한 코드
   * classifier를 통해 classification 진행
  
 - ResNetMIL
-  - ResNet50을 Instance Encoder로 사용
-  - ResNet50을 거친 후 Transformer Encoder Layer에 들어가게 됨
-  - Transformer Encoder Layer를 거쳐 CLS 토큰의 feature 추출
-  - CLS 토큰의 feature를 classifier를 이용하여 예측 생성
+  - ResNet50을 Instance Encoder로 사용 ViT와 마찬가지로 Pre-trained 된 weight를 사용하며 Parameter Freezing을 한 후 resdiual adapter를 결합
+  - ResNet50을 거친 후 Multi-Head Self-Attention에 들어가게 됨
+  - 그 다음은 ViTMIL과 동일한 과정
